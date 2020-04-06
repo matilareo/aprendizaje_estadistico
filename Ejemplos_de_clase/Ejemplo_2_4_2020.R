@@ -57,3 +57,4 @@ names(ajuste) #metodos del objeto
 summary(ajuste) # Resumen copado del objeto 
 
 ajuste$coefficients #atributos del objeto 
+
