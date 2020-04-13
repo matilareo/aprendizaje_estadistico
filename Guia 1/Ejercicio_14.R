@@ -9,7 +9,7 @@ estimar_beta <- function(y,...){
 
 #DEFINO LOS VECTORES 
 x<-rnorm(100)
-epsilon<-rnorm(100,0,0.025)
+epsilon<-rnorm(100,0,0.1) #PARA LOS ULTIMOS PUNTOS MODIFICAR LA VARIANZA 
 
 #DEFINO RECTA
 y<-(-1)+0.5*x+epsilon
@@ -36,3 +36,7 @@ mse_lineal<-sum((y-y_lineal)*(y-y_lineal))/length(y)
 mse_cuadratico<-sum((y-y_cuadratico)*(y-y_cuadratico))/length(y)
 is_bigger<-mse_lineal>mse_cuadratico
 
+#VARIANZA DE LO ESTIMADO 
+sd(y)
+sd(y_lineal)
+sd(y_cuadratico)
