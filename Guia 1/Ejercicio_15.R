@@ -9,7 +9,7 @@ estimar_beta <- function(y,...){
 
 #DEFINO MIS VARIABLES
 x1<-runif(100)
-x2<-0.5*x1+rnorm(100)/10
+x2<-0.5*x1+rnorm(100)/100
 e<-rnorm(100)
 
 y<-2+2*x1+0.3*x2+e
