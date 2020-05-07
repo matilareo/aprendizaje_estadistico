@@ -39,9 +39,14 @@ b3<-ajuste$coefficients[2]
 b4<-ajuste$coefficients[3]
 ggpairs(data.frame(cbind(x2,x3,x4,y)))
 ya<-b2*x2+b3*x3+b4*x4
-ggplot(data=NULL,aes(x2,ya))+geom_point(aes(x2,y),color='red')+
-  geom_point(color='black')
+ggplot(data=NULL)+geom_abline(aes(ya,y),color='red')
 
+
+# el resultado de la suma de las variables da cercano a 100 esto puede indicar
+# que la matriz de diseño puede no ser de rango completo, es decir, que hay alguno 
+# o algunas columnas LD. La matriz de diseño puede no estar bien condicionada.
+# Si puede justificar la eliminacion del intercept ya que es LD con la suma de las
+# muestras.
 
 
 
